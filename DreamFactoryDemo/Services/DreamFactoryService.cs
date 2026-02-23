@@ -28,7 +28,6 @@ namespace DreamFactoryDemo.Services
             var response = await _httpClient.SendAsync(request);
             return await response.Content.ReadAsStringAsync();
         }
-
         public async Task<string> InsertAsync(string tableName, object data)
         {
             var body = new { resource = new[] { data } };
