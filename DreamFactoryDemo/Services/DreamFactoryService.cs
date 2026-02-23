@@ -67,7 +67,6 @@ namespace DreamFactoryDemo.Services
                 p_month = month,
                 p_year = year
             };
-
             var content = new StringContent(
                 JsonConvert.SerializeObject(body),
                 Encoding.UTF8,
@@ -78,8 +77,8 @@ namespace DreamFactoryDemo.Services
             //    $"{BaseUrl}/_proc/project_mgmt.usp_get_attendance_report");
 
             var request = new HttpRequestMessage(
-    HttpMethod.Post,
-    $"{BaseUrl}/_proc/project_mgmt.usp_get_attendance_report_v1?fetch=true");
+            HttpMethod.Post,
+             $"{BaseUrl}/_proc/project_mgmt.usp_get_attendance_report_v1?fetch=true");
 
             request.Headers.Add("X-DreamFactory-API-Key", ApiKey);
             request.Content = content;
