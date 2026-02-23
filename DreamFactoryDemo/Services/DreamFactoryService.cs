@@ -32,7 +32,6 @@ namespace DreamFactoryDemo.Services
         public async Task<string> InsertAsync(string tableName, object data)
         {
             var body = new { resource = new[] { data } };
-
             var content = new StringContent(
                 JsonConvert.SerializeObject(body),
                 Encoding.UTF8,
